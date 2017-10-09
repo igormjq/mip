@@ -1,0 +1,42 @@
+.section-subscribe {
+    .widget {
+        height: 350px;
+        flex: 1 0 50%;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include mobile {
+            flex: 1 0 100%;
+            padding: 0 15px;
+        }
+
+        &:first-child {
+            background-image: url('../assets/img/backgrounds/bg-code-arena.png');
+        }
+
+        &:last-child {
+            background-image: url('../assets/img/backgrounds/bg-signup.png');
+        }
+
+        .logo {
+            max-width: 320px;
+        }
+
+        h3 {
+            color: $white;
+            text-align: center;
+        }
+        
+        .logo,
+        h3 {
+            margin-top: -35px;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 40px;
+        }
+    }
+}
