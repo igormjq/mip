@@ -22,6 +22,12 @@
     &.flex-column {
         flex-direction: column;
     }
+    &.flex-space-around {
+        justify-content: space-around;
+    }
+    &.flex-space-between {
+        justify-content: space-between;
+    }
 }
 
 .section {
@@ -29,6 +35,9 @@
         @include mobile {
             flex-direction: column;
         }
+    }
+    &-title {
+        text-align: center;
     }
 }
 

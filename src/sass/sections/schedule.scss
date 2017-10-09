@@ -1,0 +1,55 @@
+.section-schedule {
+    padding: 200px 0;
+
+    @include mobile {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        color: $light-purple;
+    }
+
+    .schedule {
+        max-width: 920px;
+        margin: 95px auto 0 auto;
+        
+        @include mobile {
+            margin-top: 40px;
+            flex-direction: column;
+
+            .schedule-day {
+                margin: 30px 0;
+
+                &:nth-first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    .schedule-day {
+        .day {
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .schedule-activities {
+            width: 100%;
+
+            .activity {
+                padding: 15px;
+
+                &:nth-child(odd) {
+                    background-color: $soft-purple;
+                }
+
+                .time {
+                    font-weight: bold;
+                    
+                    &:after {
+                        content: ' - ';
+                    }
+                }
+            }
+        }
+    }
+}
