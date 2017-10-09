@@ -1,0 +1,41 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include mobile {
+        margin: 0 15px;
+    }
+    
+    &-fluid {
+        width: 100%;
+    }
+
+    &.container-flex {
+        display: flex;
+
+        &.flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+        &.flex-column {
+            flex-direction: column;
+        }
+    }
+}
+
+.section {
+    padding: 80px 0;
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.img-responsive {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
