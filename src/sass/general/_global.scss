@@ -7,27 +7,28 @@
     }
     
     &-fluid {
+        max-width: 100%;
         width: 100%;
     }
+}
 
-    &.container-flex {
-        display: flex;
+.flex {
+    display: flex;
 
-        &.flex-center {
-            justify-content: center;
-            align-items: center;
-        }
-        &.flex-column {
-            flex-direction: column;
-        }
+    &.flex-center {
+        justify-content: center;
+        align-items: center;
+    }
+    &.flex-column {
+        flex-direction: column;
     }
 }
 
 .section {
-    padding: 80px 0;
-
-    @include mobile {
-        padding: 40px 0;
+    & > .flex {
+        @include mobile {
+            flex-direction: column;
+        }
     }
 }
 
@@ -38,4 +39,24 @@
 
 .text-uppercase {
     text-transform: uppercase;
+}
+
+.btn {
+    border: 1px solid $white;
+    color: $white;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 0 25px;
+    cursor: pointer;
+    transition: opacity .2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:visited {
+        color: $white;
+    }
+    
 }

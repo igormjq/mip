@@ -2,6 +2,11 @@
     background: url('../assets/img/backgrounds/bg-header-lg.png');
     color: $white;
     text-align: center;
+    padding: 80px 0;
+    
+    @include mobile {
+        padding: 40px 0;
+    }
 
     .header-logo {
         max-width: 365px;
