@@ -1,0 +1,95 @@
+.section-lectures {
+    padding-top: 100px;
+    background-color: $light-purple;
+
+    .section-title {
+        color: $white;
+    }
+
+    .speakers {
+        padding-top: 90px;
+
+        .speaker {
+            background-color: $dark-purple;
+
+            .speaker-description {
+                .content {
+                    float: right;
+
+                    @include mobileAndTablet {
+                        float: none;
+                        text-align: left;
+                    }
+                }
+            }
+
+            @include mobileAndTablet {
+                flex-direction: column;
+            }
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+                text-align: right;
+
+                @include mobileAndTablet {
+                    flex-direction: column;
+                }
+            }
+
+            & > div {
+                flex: 50%;
+            }
+
+            &-image {
+                background: green;
+                min-height: 350px;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                &[data-speaker='marcelo'] {
+                    background-image: url('../assets/img/backgrounds/palestras/bg-palestra-marcelo.png');
+                }
+
+                &[data-speaker='marilia'] {
+                    background-image: url('../assets/img/backgrounds/palestras/bg-palestra-marilia.png');
+                    @include desktop-sm {
+                        background-position-x: 90%;
+                    }
+                }
+
+                &[data-speaker='ricardo'] {
+                    background-image: url('../assets/img/backgrounds/palestras/bg-palestra-ricardo.png');
+                    @include desktop-sm {
+                        background-position-x: 90%;
+                    }
+                }
+            }
+
+            &-description {
+                color: $white;
+                font-family: 'Arial';
+                font-size: 16px;
+
+                .content {
+                    max-width: 545px;
+                    padding: 4em;
+
+                    @include mobile {
+                        padding: 15px;
+                        max-width: 100%;
+                    }
+
+                    .speaker-info {
+                        font-family: 'Bebas Neue';
+                        color: $coral-blue;
+                        margin-bottom: 40px;
+
+                        h3 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
