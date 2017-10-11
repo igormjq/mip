@@ -39,6 +39,10 @@ module.exports = {
                         loader: 'image-webpack-loader'
                     }
                 ]
+            },
+            {
+                test: /.(eot|ttf|otf|woff2?)$/,
+                loader: 'url-loader'
             }
         ]
     },
