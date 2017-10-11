@@ -27,13 +27,30 @@
         }
     }
     .schedule-day {
+        flex: 1 0 auto;
+        max-width: 280px;
+
+        &:nth-child(even) {
+            // margin: 0 30px;
+
+            @include mobile {
+                margin: 0;
+            }
+        }
         .day {
             padding-left: 15px;
             margin-bottom: 20px;
+            font-family: 'Bebas Neue';
+            font-size: 26px;
+            font-weight: 600;
+            color: $dark-gray;
         }
 
         .schedule-activities {
             width: 100%;
+            font-size: 13px;
+            font-family: 'Arial';
+            color: $dark-gray;
 
             .activity {
                 padding: 15px;
@@ -43,10 +60,10 @@
                 }
 
                 .time {
-                    font-weight: bold;
+                    font-weight: 600;
                     
                     &:after {
-                        content: ' - ';
+                        content: ' – ';
                     }
                 }
             }
