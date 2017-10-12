@@ -15,6 +15,11 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
                 test: /\.s[ac]ss$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader'],
@@ -36,7 +41,12 @@ module.exports = {
                         }
                     }, 
                     {
-                        loader: 'image-webpack-loader'
+                        loader: 'image-webpack-loader',
+                        options: {
+                            optpng: {
+                                quality: 100
+                            }
+                        }
                     }
                 ]
             },
