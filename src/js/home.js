@@ -26,8 +26,10 @@ class Home {
         });
 
         this.$hamburguer.addEventListener('click', () => {
+            
             this.$menu.classList.toggle('active');
             this.$menu.classList.toggle('inactive');
+            
         });
     }
 }
