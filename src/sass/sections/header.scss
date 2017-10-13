@@ -32,11 +32,13 @@
       animation: hamburguer-2-out .3s forwards;
 
     }
-    span:last-child {
-
+    &.nav-dark {
+      .bar {
+        background: $coral-blue;
+      }
     }
-
   }
+
   .header-logo {
     max-width: 365px;
     margin-bottom: 60px;
