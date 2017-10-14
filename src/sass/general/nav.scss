@@ -16,9 +16,10 @@ nav {
     animation: menu-in .5s forwards;
   }
   &.active ~ .section-header .mobile-nav-button {
-
     transform: translateY(12px);
-
+    span {
+      background: white !important;
+    }
     span:first-child {
       animation: hamburguer-1 .3s forwards;
     }
