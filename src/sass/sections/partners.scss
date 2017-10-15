@@ -1,6 +1,10 @@
 .section-partners {
     padding: 150px 0;
 
+    @include mobileAndTablet {
+        padding: 125px 0 45px 0;
+    }
+
     & > .container {
         justify-content: space-around;
 
@@ -51,7 +55,6 @@
 
     .event-helders,
     .event-sponsorship {
-        height: 380px;
         justify-content: space-between;
 
         @include mobile {
@@ -64,7 +67,15 @@
             }
         }
     }
-    
+
+    .logo.first {
+        margin-top: -45px;
+    }
+
+    .event-sponsorship {
+        height: 380px;
+    }
+
     .event-helders {
         .companies {
             max-width: 675px;

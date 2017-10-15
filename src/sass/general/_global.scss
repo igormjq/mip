@@ -91,3 +91,22 @@
     }
     
 }
+
+.scroll-top {
+    background: $dark-purple;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    cursor: pointer;
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

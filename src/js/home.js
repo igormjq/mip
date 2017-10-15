@@ -7,6 +7,7 @@ class Home {
 
         this.$btns = document.querySelectorAll('.btn-scroll');
         this.$sections = document.querySelectorAll('.section-scroll');
+        this.$scrollTopButton = document.querySelector('.scroll-top');
         this.bindEvents();
     }
 
@@ -37,6 +38,10 @@ class Home {
                 this.$menu.classList.toggle('inactive');
                 scrollIt(this.$sections[index]);
             })
+        });
+
+        this.$scrollTopButton.addEventListener('click', () => {
+            scrollIt(this.$sections[0]);
         })
     }
 }
