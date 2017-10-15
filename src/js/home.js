@@ -1,3 +1,5 @@
+import { scrollIt } from './helpers';
+
 class Home {
     constructor() {
         this.$menu = document.querySelector('nav');
@@ -6,10 +8,6 @@ class Home {
         this.$btns = document.querySelectorAll('.btn-scroll');
         this.$sections = document.querySelectorAll('.section-scroll');
         this.bindEvents();
-    }
-
-    init() {
-        // console.log(this.menu);
     }
 
     bindEvents() {
@@ -32,14 +30,6 @@ class Home {
             this.$menu.classList.toggle('inactive');
         });
 
-
-        function scrollIt(element) {
-            window.scrollTo({
-                'behavior': 'smooth',
-                'left': 0,
-                'top': element.offsetTop
-            });
-        }
         this.$btns.forEach((element, index, array) => {
             element.addEventListener('click', (e) => {
                 e.preventDefault();
