@@ -1,0 +1,14 @@
+footer {
+    height: 60px;
+    padding: 0 50px;
+
+    @include mobile {
+        padding: 0;
+    }
+
+    p {
+        color: $dark-gray;
+        font-size: 10px;
+        font-family: 'Arial';
+    }
+}
