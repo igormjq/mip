@@ -18,8 +18,12 @@ class Home {
             const end = start + targetSection.offsetHeight;
 
             const changingPoint = window.scrollY + this.$hamburguer.offsetTop;
+            
+            const targetSection2 = document.querySelector('.section-partners');
+            const start2 = targetSection2.offsetTop;
+            const end2 = start2 + targetSection2.offsetHeight;
 
-            if(changingPoint >= start && changingPoint <= end) 
+            if((changingPoint >= start && changingPoint <= end) || (changingPoint >= start2 && changingPoint <= end2)) 
                return this.$hamburguer.classList.toggle('nav-dark', true);
 
             this.$hamburguer.classList.remove('nav-dark');
