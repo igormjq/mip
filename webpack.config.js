@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const production = (process.env.NODE_ENV === 'production');
 
 module.exports = {
 
@@ -71,4 +72,10 @@ module.exports = {
         }),
         new CleanWebpackPlugin('./dist')
     ]
+};
+
+if(production) {
+    module.exports.plugins.push(
+        new webpack.optimize.UglifyJsPlugin()
+    )
 };
