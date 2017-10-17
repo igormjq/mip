@@ -10,5 +10,10 @@ footer {
         color: $dark-gray;
         font-size: 10px;
         font-family: 'Arial';
+
+        span {
+            display: block;
+            margin-top: 5px;
+        }
     }
 }
