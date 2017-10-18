@@ -39,14 +39,17 @@ nav {
     display: block;
     margin: 0 auto;
     max-width: 365px;
+    max-width: 265px;
     margin-bottom: 60px;
+    margin-bottom: 10px;
   }
   .nav-items {
     li {
       display: block;
       a {
         display: inline-block;
-        margin: 3vh 0;
+        //margin: 3vh 0;
+        margin: 2vh 0;
         color: #fff;
         transition: .5s;
         &:hover,&:active {
@@ -61,7 +64,8 @@ nav {
   }
   .nav-social {
     width: 130px;
-    justify-content: space-between !important;
+    //justify-content: space-between !important;
+    justify-content: center !important;
 
     .facebook {
       width: 30px;

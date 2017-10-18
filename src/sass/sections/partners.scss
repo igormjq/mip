@@ -12,7 +12,7 @@
             justify-content: center;
         }
     }
-    
+
     .title {
         font-family: 'Bebas Neue';
         color: $coral-blue;
@@ -80,6 +80,8 @@
         .companies {
             max-width: 675px;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 
             @include tablet {
                 max-width: 350px;
@@ -88,6 +90,7 @@
             .logo {
                 margin: 30px 0;
                 flex: 1 0 25%;
+                text-align: center;
 
                 @include mobileAndTablet {
 
@@ -129,7 +132,7 @@
                 }
             }
         }
-    
+
         @include tablet {
             margin-left: 100px;
         }
